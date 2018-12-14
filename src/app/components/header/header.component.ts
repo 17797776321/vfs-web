@@ -11,5 +11,5 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  logoUrl:string = 'http://img0.imgtn.bdimg.com/it/u=1560305741,2588386831&fm=200&gp=0.jpg'
 }
