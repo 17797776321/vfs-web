@@ -6,13 +6,7 @@ import { HomeComponent } from './views/home/home.component';
 const routes: Routes = [
   {
     path:'',
-    component: LayoutComponent,
-    children:[
-      {
-        path:'home',
-        component:HomeComponent
-      }
-    ]
+    component: HomeComponent,
   }
 ];
 
