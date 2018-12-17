@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   bannerUrl:string = '../../../assets/images/banner.png'
   titleText:string = '一站式服务  助力企业转型'
   desText:string = '十大行业解决方案  数百款营销活动 公众号'
-  serviceItems:[] = [
+  serviceItems:any[] = [
     new ServiceItems('../../../assets/images/service1.png','电商平台'),
     new ServiceItems('../../../assets/images/service2.png','微信营销'),
     new ServiceItems('../../../assets/images/service3.png','APP定制'),
