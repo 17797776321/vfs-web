@@ -6,8 +6,8 @@
 </div>
 <!-- service options -->
 <div class="service_box">
-  <h2 class="service_box_tit">服务项目</h2>
-  <div class="service_box_tit_Eng">Service Items</div>
+  <h2 class="box_title">服务项目</h2>
+  <div class="box_title_eng">Service Items</div>
   <div class="clearfix">
     <div
       class="option"
@@ -21,9 +21,31 @@
 </div>
 <!-- case options-->
 <div class="case_box">
-  <h2 class="case_box_tit">案例</h2>
-  <div class="case_box_tit_eng">Case</div>
+  <h2 class="box_title">案例</h2>
+  <div class="box_title_eng">Case</div>
   <div class="case_option" *ngFor="let case of caseItems">
     <img [src]="case.imgUrl" [alt]="case.text">
+  </div>
+</div>
+<!-- 我们的品质 -->
+<div class="quality_box">
+  <h2 class="box_title">我们的品质</h2>
+  <div class="box_title_eng">Quality</div>
+  <div class="options_box clearfix">
+    <div class="option pull-left shadow mr">
+      <img src="../../../assets/images/quality1.png" alt="" class="img">
+      <div class="tit color92c3fd"> 技术领先</div>
+      <div class="des color92c3fd">始终走在行业前端</div>
+    </div>
+    <div class="option pull-left bgcolor mr">
+      <img src="../../../assets/images/quality2.png" alt="" class="img">
+      <div class="tit colorfff"> 技术领先</div>
+      <div class="des colorfff">始终走在行业前端</div>
+    </div>
+    <div class="option pull-left shadow">
+      <img src="../../../assets/images/quality3.png" alt="" class="img">
+      <div class="tit color92c3fd"> 技术领先</div>
+      <div class="des color92c3fd">始终走在行业前端</div>
+    </div>
   </div>
 </div>
