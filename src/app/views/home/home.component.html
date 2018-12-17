@@ -19,3 +19,11 @@
     </div>
   </div>
 </div>
+<!-- case options-->
+<div class="case_box">
+  <h2 class="case_box_tit">案例</h2>
+  <div class="case_box_tit_eng">Case</div>
+  <div class="case_option" *ngFor="let case of caseItems">
+    <img [src]="case.imgUrl" [alt]="case.text">
+  </div>
+</div>

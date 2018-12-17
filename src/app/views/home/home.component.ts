@@ -18,6 +18,11 @@ export class HomeComponent implements OnInit {
     new ServiceItems('../../../assets/images/service5.png','网站建设',false),
     new ServiceItems('../../../assets/images/service6.png','客户案例',true)
   ]
+  caseItems:any[] = [
+    new CaseItems('../../../assets/images/case1.png','case1'),
+    new CaseItems('../../../assets/images/case2.png','case2'),
+    new CaseItems('../../../assets/images/case3.png','case3')
+  ]
   constructor() {}
 
   ngOnInit() {
@@ -30,5 +35,12 @@ export class ServiceItems {
     public imgUrl:string,
     public text:string,
     public bg:boolean
+  ){}
+}
+
+export class CaseItems {
+  constructor(
+    public imgUrl:string,
+    public text:string
   ){}
 }
