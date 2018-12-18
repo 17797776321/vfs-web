@@ -25,9 +25,7 @@ export class HomeComponent implements OnInit {
   ]
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.serviceItems)
-  }
+  ngOnInit() {}
 }
 
 export class ServiceItems {

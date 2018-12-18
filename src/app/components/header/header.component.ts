@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute,Params } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private routeInfo:ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this)
+    console.log(this.routeInfo)
+    // this.routeInfo.params.subscribe((params:Params)=>console.log(params))
   }
   logoUrl:string = 'http://img0.imgtn.bdimg.com/it/u=1560305741,2588386831&fm=200&gp=0.jpg'
+  closeMenu(e):void {
+    $('#bs-example-navbar-collapse-1').collapse('hide')
+  }
 }
