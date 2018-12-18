@@ -13,6 +13,7 @@
       class="option"
       *ngFor="let option of serviceItems; let i = index"
       [ngClass]="{ 'pull-left': i % 2 == 0, 'pull-right': i % 2 == 1 ,'left_bg':!option.bg,'right_bg':option.bg}"
+      (click)="jump(option.routerName)"
     >
       <img class="option_img" [src]="option.imgUrl" alt="" />
       <div class="option_text">{{ option.text }}</div>
