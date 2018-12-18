@@ -13,10 +13,12 @@ const routes: Routes = [
   {
     path:'home',
     component: HomeComponent,
+    data:{ animation: 'home' }
   },
   {
     path:'contactus',
-    component: ContactusComponent
+    component: ContactusComponent,
+    data:{ animation:'contactus' }
   }
 ];
 
