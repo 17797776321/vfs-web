@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute,Params } from '@angular/router';
+import { ActivatedRoute,Params, Router} from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,11 +7,14 @@ import { ActivatedRoute,Params } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private routeInfo:ActivatedRoute) { }
+  constructor(
+    private routeInfo:ActivatedRoute,
+    private router:Router
+    ) { }
 
   ngOnInit() {
+    console.log(this.router)
     console.log(this.routeInfo)
-    // this.routeInfo.params.subscribe((params:Params)=>console.log(params))
   }
   logoUrl:string = 'http://img0.imgtn.bdimg.com/it/u=1560305741,2588386831&fm=200&gp=0.jpg'
   closeMenu(e):void {
