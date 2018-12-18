@@ -6,7 +6,7 @@ import { slideInAnimation } from '../../animations';
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.less'],
-  animations: [ slideInAnimation]
+  animations: [ slideInAnimation ]
 })
 export class LayoutComponent implements OnInit {
 
