@@ -6,7 +6,15 @@
     <h2 class="box_title">网站建设</h2>
     <div class="box_title_eng">Website</div>
     <div class="option_box clearfix">
-      <div class="option pull-left"></div>
+      <div class="option" *ngFor="let item of websiteArr; let i = index" [ngClass]="{'pull-left': (i+1)%2 == 1,'pull-right': (i+1)%2 == 0}" [ngStyle]="{'backgroundColor': item.color}">
+        <div class="tit_box">
+          <img [src]="item.imgUrl" alt="">
+          <span>{{item.title}}</span>
+        </div>
+        <div class="des_box">
+          {{item.content}}
+        </div>
+      </div>
     </div>
   </div>
 </div>
