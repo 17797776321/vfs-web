@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { ContactusComponent } from './views/contactus/contactus.component';
 import { OnlineretailersComponent } from './views/onlineretailers/onlineretailers.component';
+import { WechatmarketingComponent } from './views/wechatmarketing/wechatmarketing.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { OnlineretailersComponent } from './views/onlineretailers/onlineretailer
     FooterComponent,
     HomeComponent,
     ContactusComponent,
-    OnlineretailersComponent
+    OnlineretailersComponent,
+    WechatmarketingComponent
   ],
   imports: [
     BrowserModule,

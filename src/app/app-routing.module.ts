@@ -4,6 +4,7 @@ import { LayoutComponent } from './views/layout/layout.component';
 import { HomeComponent } from './views/home/home.component';
 import { ContactusComponent } from './views/contactus/contactus.component';
 import { OnlineretailersComponent } from './views/onlineretailers/onlineretailers.component';
+import { WechatmarketingComponent } from './views/wechatmarketing/wechatmarketing.component';
 
 const routes: Routes = [
   {
@@ -21,9 +22,15 @@ const routes: Routes = [
     component: ContactusComponent,
     data:{ animation:'contactus' }
   },
+  // 电子商务
   {
     path:'onlineretailers',
     component: OnlineretailersComponent
+  },
+  // 微信营销
+  {
+    path:'wechatmarketing',
+    component: WechatmarketingComponent
   }
 ];
 
