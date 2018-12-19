@@ -5,10 +5,10 @@
   <h2 class="box_title">电子商务</h2>
   <div class="box_title_eng">Electronics</div>
   <div class="box clearfix" *ngFor="let item of electronics; let i = index" [ngClass]="{'bgcolorF4F4F4': (i+1)%2 == 1}">
-    <div class="img_box" [ngClass]="{'pull-left': (i+1)%2 == 1,'pull-right':((i+1)%2 == 0)}">
+    <div class="img_box" [ngClass]="{'pull-left': (i+1)%2 == 0,'pull-right':((i+1)%2 == 1)}">
       <img [src]="item.introImg" alt="">
     </div>
-    <div class="text_box" [ngClass]="{'pull-left': (i+1)%2 == 0,'pull-right':(i+1)%2 == 1,'paddingLeft':(i+1)%2 == 1,'paddingRight':(i+1)%2 == 0}">
+    <div class="text_box" [ngClass]="{'pull-left': (i+1)%2 == 1,'pull-right':(i+1)%2 == 0,'paddingLeft':(i+1)%2 == 0,'paddingRight':(i+1)%2 == 1}">
       <h3 class="tit">{{item.title}}</h3>
       <p class="cont">{{item.content}}</p>
     </div>
