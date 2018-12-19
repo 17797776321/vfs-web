@@ -39,6 +39,7 @@ const routes: Routes = [
     path:'systemdev',
     component:SystemdevComponent
   },
+  // 404
   {
     path:'**',
     component: Code404Component
