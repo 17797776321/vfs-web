@@ -14,6 +14,7 @@ import { OnlineretailersComponent } from './views/onlineretailers/onlineretailer
 import { WechatmarketingComponent } from './views/wechatmarketing/wechatmarketing.component';
 import { SystemdevComponent } from './views/systemdev/systemdev.component';
 import { Code404Component } from './views/code404/code404.component';
+import { WebsiteComponent } from './views/website/website.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Code404Component } from './views/code404/code404.component';
     OnlineretailersComponent,
     WechatmarketingComponent,
     SystemdevComponent,
-    Code404Component
+    Code404Component,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,

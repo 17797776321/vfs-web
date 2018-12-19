@@ -7,6 +7,7 @@ import { OnlineretailersComponent } from './views/onlineretailers/onlineretailer
 import { WechatmarketingComponent } from './views/wechatmarketing/wechatmarketing.component';
 import { SystemdevComponent } from './views/systemdev/systemdev.component';
 import { Code404Component } from './views/code404/code404.component';
+import { WebsiteComponent } from './views/website/website.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,11 @@ const routes: Routes = [
   {
     path:'systemdev',
     component:SystemdevComponent
+  },
+  // 网站建设
+  {
+    path: 'website',
+    component: WebsiteComponent
   },
   // 404
   {
