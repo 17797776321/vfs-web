@@ -17,33 +17,69 @@ const routes: Routes = [
   },
   {
     path:'home',
-    component: HomeComponent,
-    data:{ animation: 'home' }
+    component: LayoutComponent,
+    children:[
+      {
+        path:'',
+        component:HomeComponent,
+        data:{ animation: 'home' }
+      }
+    ]
   },
   {
     path:'contactus',
-    component: ContactusComponent,
-    data:{ animation:'contactus' }
+    component: LayoutComponent,
+    children:[
+      {
+        path:'',
+        component:ContactusComponent,
+        data:{ animation:'contactus' }
+      }
+    ]
   },
   // 电子商务
   {
     path:'onlineretailers',
-    component: OnlineretailersComponent
+    component: LayoutComponent,
+    children:[
+      {
+        path:'',
+        component:OnlineretailersComponent
+      }
+    ]
   },
   // 微信营销
   {
     path:'wechatmarketing',
-    component: WechatmarketingComponent
+    component: LayoutComponent,
+    children:[
+      {
+        path:'',
+        component:WechatmarketingComponent
+      }
+    ]
   },
   // 系统开发
   {
     path:'systemdev',
-    component:SystemdevComponent
+    component: LayoutComponent,
+    children:[
+      {
+        path:'',
+        component:SystemdevComponent
+      }
+    ]
   },
   // 网站建设
   {
     path: 'website',
-    component: WebsiteComponent
+    component: LayoutComponent,
+    children:[
+      {
+        path:'',
+        component:WebsiteComponent
+      }
+    ]
   },
   // 404
   {
