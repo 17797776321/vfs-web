@@ -39,7 +39,7 @@ const routes: Routes = [
     ]
   },
   {
-    path:'case',
+    path:'usercase',
     component:LayoutComponent,
     children:[
       {
