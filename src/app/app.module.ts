@@ -17,6 +17,7 @@ import { Code404Component } from './views/code404/code404.component';
 import { WebsiteComponent } from './views/website/website.component';
 import { CaseComponent } from './views/case/case.component';
 import { CaseService } from './shared/case.service';
+import { CustomizedComponent } from './views/customized/customized.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CaseService } from './shared/case.service';
     SystemdevComponent,
     Code404Component,
     WebsiteComponent,
-    CaseComponent
+    CaseComponent,
+    CustomizedComponent
   ],
   imports: [
     BrowserModule,

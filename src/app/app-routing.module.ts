@@ -9,6 +9,7 @@ import { SystemdevComponent } from './views/systemdev/systemdev.component';
 import { Code404Component } from './views/code404/code404.component';
 import { WebsiteComponent } from './views/website/website.component';
 import { CaseComponent } from './views/case/case.component';
+import { CustomizedComponent } from './views/customized/customized.component';
 
 const routes: Routes = [
   {
@@ -89,6 +90,17 @@ const routes: Routes = [
       {
         path:'',
         component:WebsiteComponent
+      }
+    ]
+  },
+  // APP定制
+  {
+    path:'customized',
+    component: LayoutComponent,
+    children:[
+      {
+        path:'',
+        component:CustomizedComponent
       }
     ]
   },
