@@ -1,3 +1,17 @@
-<p>
-  customized works!
-</p>
+<div class="banner_box">
+  <img src="../../../assets/images/banner3.png" alt="">
+</div>
+<div class="container_box">
+  <h2 class="box_title">App定制</h2>
+  <div class="box_title_eng">Customization</div>
+  <div class="content_box clearfix">
+    <div class="option_box " [ngClass]="{'pull-left': (i+1)%2 == 1,'pull-right':(i+1)%2 == 0}" *ngFor="let item of customizedData;let i = index">
+      <div class="img_box pull-left">
+        <img [src]="item.imgUrl" alt="">
+      </div>
+      <div class="text_box pull-right">
+        {{item.text}}
+      </div>
+    </div>
+  </div>
+</div>
