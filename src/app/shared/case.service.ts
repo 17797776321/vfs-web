@@ -11,9 +11,6 @@ export class CaseService {
   ]
   constructor() { }
   // 返回当前服务的数据
-  getCaseData() {
-    return this.caseData
-  }
 }
 export class Case {
   constructor(

@@ -16,6 +16,7 @@ import { SystemdevComponent } from './views/systemdev/systemdev.component';
 import { Code404Component } from './views/code404/code404.component';
 import { WebsiteComponent } from './views/website/website.component';
 import { CaseComponent } from './views/case/case.component';
+import { CaseService } from './shared/case.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { CaseComponent } from './views/case/case.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [CaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
