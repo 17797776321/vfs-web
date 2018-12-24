@@ -57,13 +57,38 @@
         height: .426667rem; //32
         background: url('../../../assets/images/right.png') no-repeat;
         background-size: .426667rem .426667rem;
+        position: absolute;
+        right: -.693333rem ; //32 +20
+        top: .586667rem; // 44 
       }
     }
     .bottom{
-
+      position: relative;
+      &::after{
+        display: block;
+        content: "";
+        width: .426667rem; //32
+        height: .426667rem; //32
+        background: url('../../../assets/images/bottom.png') no-repeat;
+        background-size: .426667rem .426667rem;
+        position: absolute;
+        left: 1.786667rem; //134
+        bottom: -0.826667rem; //32 + 30
+      }
     }
     .left{
-
+      position: relative;
+      &::after{
+        display: block;
+        content: "";
+        width: .426667rem; //32
+        height: .426667rem; //32
+        background: url('../../../assets/images/left.png') no-repeat;
+        background-size: .426667rem .426667rem;
+        position: absolute;
+        left: -0.693333rem; // 32 + 20
+        top: .586667rem; //44
+      }
     }
   }
 }
