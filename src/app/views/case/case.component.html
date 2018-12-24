@@ -4,9 +4,9 @@
 <div class="container_box bgcolorF4F4F4">
   <h2 class="box_title">客户案例</h2>
   <div class="box_title_eng">Case</div>
-  <div class="card_box" *ngFor="let item of myCase">
-    <img class="img" [src]="item.imgUrl" alt="">
+  <a [href]="item.caseurl" class="card_box" *ngFor="let item of myCase">
+    <img class="img" [src]="item.pic" alt="">
     <div class="tit">{{item.title}}</div>
-    <div class="des">{{item.text}}</div>
-  </div>
+    <div class="des">{{item.des}}</div>
+  </a>
 </div>

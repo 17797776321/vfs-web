@@ -12,8 +12,9 @@ export class CaseComponent implements OnInit {
   constructor(private caseData:CaseService) { }
   myCase:any[] = []
   ngOnInit() {
-    this.caseData.getCaseData().subscribe(value=>{
-      this.myCase = value
+    this.caseData.getCaseData().subscribe(data=>{
+      console.log(data)
+      this.myCase = data
     })
   }
 }
