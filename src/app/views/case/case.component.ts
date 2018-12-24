@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CaseService } from 'src/app/shared/case.service';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-case',
@@ -11,7 +12,9 @@ export class CaseComponent implements OnInit {
   constructor(private caseData:CaseService) { }
   myCase:any[] = []
   ngOnInit() {
-    this.myCase = this.caseData.caseData
+    this.caseData.getCaseData().subscribe(value=>{
+      this.myCase = value
+    })
   }
 }
 export class Case {

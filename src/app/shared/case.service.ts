@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +12,7 @@ export class CaseService {
   constructor() { }
   // 返回当前服务的数据
   getCaseData() {
-    return this.caseData
+    return of(this.caseData)
   }
 }
 export class Case {
