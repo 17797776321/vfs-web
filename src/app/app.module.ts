@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import * as $ from 'jquery';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -38,7 +39,8 @@ import { CustomizedComponent } from './views/customized/customized.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [CaseService],
   bootstrap: [AppComponent]
