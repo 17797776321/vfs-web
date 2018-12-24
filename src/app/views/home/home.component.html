@@ -24,7 +24,7 @@
 <div class="case_box">
   <h2 class="box_title">案例</h2>
   <div class="box_title_eng">Case</div>
-  <a [href]="case.caseurl" class="case_option" *ngFor="let case of caseItems;let i = index" [hidden]="i>2">
+  <a [href]="case.caseurl" class="case_option" *ngFor="let case of caseItems;let i = index" [ngClass]="{'hidden': i>2}">
     <img [src]="case.pic" [alt]="case.des">
   </a>
 </div>
