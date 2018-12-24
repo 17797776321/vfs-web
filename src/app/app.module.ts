@@ -19,6 +19,7 @@ import { WebsiteComponent } from './views/website/website.component';
 import { CaseComponent } from './views/case/case.component';
 import { CaseService } from './shared/case.service';
 import { CustomizedComponent } from './views/customized/customized.component';
+import { RequestService } from './utils/request.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { CustomizedComponent } from './views/customized/customized.component';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [CaseService],
+  providers: [CaseService,RequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

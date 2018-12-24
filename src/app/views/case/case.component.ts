@@ -13,6 +13,7 @@ export class CaseComponent implements OnInit {
   myCase:any
   ngOnInit() {
     this.caseData.getCaseData().subscribe(data=>{
+      console.log(data)
       this.myCase = data
     })
   }

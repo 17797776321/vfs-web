@@ -13,8 +13,6 @@ export class HeaderComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    console.log(this.router)
-    console.log(this.routeInfo)
   }
   logoUrl:string = 'http://img0.imgtn.bdimg.com/it/u=1560305741,2588386831&fm=200&gp=0.jpg'
   closeMenu(e):void {
