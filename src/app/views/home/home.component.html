@@ -24,9 +24,9 @@
 <div class="case_box">
   <h2 class="box_title">案例</h2>
   <div class="box_title_eng">Case</div>
-  <div class="case_option" *ngFor="let case of caseItems">
-    <img [src]="case.imgUrl" [alt]="case.text">
-  </div>
+  <a [href]="case.caseurl" class="case_option" *ngFor="let case of caseItems;let i = index" [hidden]="i>2">
+    <img [src]="case.pic" [alt]="case.des">
+  </a>
 </div>
 <!-- 我们的品质 -->
 <div class="quality_box">

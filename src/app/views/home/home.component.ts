@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { log } from 'util';
 import { Router } from '@angular/router';
+import { CaseService } from 'src/app/shared/case.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,19 +19,21 @@ export class HomeComponent implements OnInit {
     new ServiceItems('../../../assets/images/service5.png','网站建设',false,'website'),
     new ServiceItems('../../../assets/images/service6.png','客户案例',true,'usercase')
   ]
-  caseItems:any[] = [
-    new CaseItems('../../../assets/images/case1.png','case1'),
-    new CaseItems('../../../assets/images/case2.png','case2'),
-    new CaseItems('../../../assets/images/case3.png','case3')
-  ]
+  caseItems:any
   constructor(
-    private router:Router
+    private router:Router,
+    private caseService:CaseService
   ) {}
   jump(name):void {
     console.log(name)
     this.router.navigate([`/${name}`])
   }
-  ngOnInit() {}
+  ngOnInit() {
+    this.caseService.getCaseData().subscribe(data=>{
+      console.log(data)
+      this.caseItems = data
+    })
+  }
 }
 
 export class ServiceItems {
