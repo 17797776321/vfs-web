@@ -10,10 +10,9 @@ import { Observable, of } from 'rxjs';
 export class CaseComponent implements OnInit {
 
   constructor(private caseData:CaseService) { }
-  myCase:any[] = []
+  myCase:any
   ngOnInit() {
     this.caseData.getCaseData().subscribe(data=>{
-      console.log(data)
       this.myCase = data
     })
   }
