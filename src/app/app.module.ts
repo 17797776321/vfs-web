@@ -38,10 +38,10 @@ import { RequestService } from './utils/request.service';
     CustomizedComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'my-app'}),
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule  
+    HttpClientModule
   ],
   providers: [CaseService,RequestService],
   bootstrap: [AppComponent]
