@@ -5,7 +5,10 @@ import { slideInAnimation } from '../../animations';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.less']
+  styleUrls: ['./layout.component.less'],
+  animations:[
+    slideInAnimation
+  ]
 })
 export class LayoutComponent implements OnInit {
 
@@ -14,6 +17,7 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
   }
   prepareRoute(outlet: RouterOutlet) {
+    console.log(outlet)
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 }

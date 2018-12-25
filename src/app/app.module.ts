@@ -40,8 +40,8 @@ import { RequestService } from './utils/request.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule  
   ],
   providers: [CaseService,RequestService],
   bootstrap: [AppComponent]

@@ -29,7 +29,7 @@ export const slideInAnimation =
       ]),
       query(':enter', animateChild()),
     ]),
-    transition('* <=> FilterPage', [
+    transition('* <=> home', [
       style({ position: 'relative' }),
       query(':enter, :leave', [
         style({
