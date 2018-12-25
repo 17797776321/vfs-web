@@ -16,6 +16,6 @@ export class HeaderComponent implements OnInit {
   }
   logoUrl:string = 'http://img0.imgtn.bdimg.com/it/u=1560305741,2588386831&fm=200&gp=0.jpg'
   closeMenu(e):void {
-    // $('#bs-example-navbar-collapse-1').collapse('hide')
+    $('#bs-example-navbar-collapse-1').collapse('hide')
   }
 }
