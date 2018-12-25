@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, from } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 import { RequestService } from '../utils/request.service';
 @Injectable({
   providedIn: 'root'
@@ -11,12 +10,9 @@ export class CaseService {
   baseUrl:string = 'http://192.168.1.186/public_html/m.php';
   // 注入Http
   constructor(private requestService:RequestService) { }
-  getCaseData() {
+  getCaseData():Observable<any> {
     return this.requestService.get('/index/getcases')
   }
-  // getCaseData() {
-  //   return this.http.get(this.baseUrl+'/index/getcases')
-  // }
 }
 export class Case {
   constructor(

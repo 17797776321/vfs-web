@@ -29,6 +29,7 @@
     "lib-flexible": "^0.3.2",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.3.3",
+    "rxjs-compat": "^6.3.3",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
