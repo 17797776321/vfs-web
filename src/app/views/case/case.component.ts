@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CaseService } from 'src/app/shared/case.service';
+import { CaseService } from '../../shared/case.service';
 import { Observable, of } from 'rxjs';
 
 @Component({

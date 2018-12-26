@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { log } from 'util';
 import { Router } from '@angular/router';
-import { CaseService } from 'src/app/shared/case.service';
+import { CaseService } from '../../shared/case.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

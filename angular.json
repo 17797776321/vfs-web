@@ -68,7 +68,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/my-project-server",
+            "outputPath": "dist/vfs-web-server",
             "main": "src/main.server.ts",
             "tsConfig": "src/tsconfig.server.json"
           }
