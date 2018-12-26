@@ -66,11 +66,14 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "outputPath": "dist/vfs-web-server",
-            "main": "src/main.server.ts",
-            "tsConfig": "src/tsconfig.server.json"
+            "browserTarget": "vfs-web:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "vfs-web:build:production"
+            }
           }
         },
         "extract-i18n": {
