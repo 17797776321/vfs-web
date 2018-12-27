@@ -48,10 +48,7 @@ app.get('*.*', express.static(join(DIST_FOLDER, 'vfs-web')));
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
-  res.render(join(DIST_FOLDER, 'vfs-web', 'index.html'), { req },(err,html)=>{
-    console.log(err)
-    res.send(html)
-  });
+  res.render(join(DIST_FOLDER, 'vfs-web', 'index.html'), { req });
 });
 
 // Start up the Node server
