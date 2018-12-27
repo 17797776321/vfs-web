@@ -39,26 +39,20 @@ app.engine('html', (_, options, callback) => {
     callback(null, html);
   });
 });
-// app.engine('html', ngExpressEngine({
-//   bootstrap: AppServerModuleNgFactory,
-//   providers: [
-//     provideModuleMap(LAZY_MODULE_MAP)
-//   ]
-// }));
+
 app.set('view engine', 'html');
 app.set('views', join(DIST_FOLDER, 'vfs-web'));
 
-// Server static files from /browser
+// Server static files from /vfs-web
 app.get('*.*', express.static(join(DIST_FOLDER, 'vfs-web')));
 
 // All regular routes use the Universal engine
-app.get('/', (req, res) => {
-  res.render(join(DIST_FOLDER, 'vfs-web', 'index.html'), { req });
+app.get('*', (req, res) => {
+  res.render(join(DIST_FOLDER, 'vfs-web', 'index.html'), { req },(err,html)=>{
+    console.log(err)
+    res.send(html)
+  });
 });
-
-// app.get('*', (req, res) => {
-//   res.render(join(DIST_FOLDER, 'vfs-web', 'index.html'), { req });
-// });
 
 // Start up the Node server
 app.listen(PORT, () => {
