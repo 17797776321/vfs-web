@@ -20,6 +20,7 @@ import { CaseComponent } from './views/case/case.component';
 import { CaseService } from './shared/case.service';
 import { CustomizedComponent } from './views/customized/customized.component';
 import { RequestService } from './utils/request.service';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { RequestService } from './utils/request.service';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [CaseService,RequestService],
+  providers: [CaseService,RequestService,{provide:LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
