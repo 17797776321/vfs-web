@@ -65,7 +65,7 @@
             }
           }
         },
-        "serve": {
+        "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/vfs-web-server",
