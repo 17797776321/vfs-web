@@ -38,7 +38,7 @@ import { RequestService } from './utils/request.service';
     CustomizedComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'my-app'}),
+    BrowserModule.withServerTransition({appId: 'vfs-web'}),
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule
