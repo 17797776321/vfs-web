@@ -26,25 +26,25 @@ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/vfs-web-se
 
 const { provideModuleMap } = require('@nguniversal/module-map-ngfactory-loader');
 
-// app.engine('html', (_, options, callback) => {
-//   renderModuleFactory(AppServerModuleNgFactory, {
-//     // Our index.html
-//     document: template,
-//     url: options.req.url,
-//     // DI so that we can get lazy-loading to work differently (since we need it to just instantly render it)
-//     extraProviders: [
-//       provideModuleMap(LAZY_MODULE_MAP)
-//     ]
-//   }).then(html => {
-//     callback(null, html);
-//   });
-// });
-app.engine('html', ngExpressEngine({
-  bootstrap: AppServerModuleNgFactory,
-  providers: [
-    provideModuleMap(LAZY_MODULE_MAP)
-  ]
-}));
+app.engine('html', (_, options, callback) => {
+  renderModuleFactory(AppServerModuleNgFactory, {
+    // Our index.html
+    document: template,
+    url: options.req.url,
+    // DI so that we can get lazy-loading to work differently (since we need it to just instantly render it)
+    extraProviders: [
+      provideModuleMap(LAZY_MODULE_MAP)
+    ]
+  }).then(html => {
+    callback(null, html);
+  });
+});
+// app.engine('html', ngExpressEngine({
+//   bootstrap: AppServerModuleNgFactory,
+//   providers: [
+//     provideModuleMap(LAZY_MODULE_MAP)
+//   ]
+// }));
 app.set('view engine', 'html');
 app.set('views', join(DIST_FOLDER, 'vfs-web'));
 
@@ -52,9 +52,13 @@ app.set('views', join(DIST_FOLDER, 'vfs-web'));
 app.get('*.*', express.static(join(DIST_FOLDER, 'vfs-web')));
 
 // All regular routes use the Universal engine
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.render(join(DIST_FOLDER, 'vfs-web', 'index.html'), { req });
 });
+
+// app.get('*', (req, res) => {
+//   res.render(join(DIST_FOLDER, 'vfs-web', 'index.html'), { req });
+// });
 
 // Start up the Node server
 app.listen(PORT, () => {
