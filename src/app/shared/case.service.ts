@@ -7,7 +7,7 @@ import { RequestService } from '../utils/request.service';
 export class CaseService {
   // 声明一个流
   caseData:Observable<any>
-  baseUrl:string = 'http://192.168.1.186/public_html/m.php';
+  baseUrl:string = 'http://www.vfengs.com/m.php';
   // 注入Http
   constructor(private requestService:RequestService) { }
   getCaseData():Observable<any> {

@@ -60,5 +60,5 @@ app.get('*.*', express.static(join(DIST_FOLDER, 'vfs-web')));
 app.get('*', express.static(join(DIST_FOLDER, 'vfs-web')));
 // Start up the Node server
 app.listen(PORT, () => {
-  console.log(`Node server listening on http://192.168.1.110:${PORT}`);
+  console.log(`Node server listening on http://www.0.com/m.php`);
 });

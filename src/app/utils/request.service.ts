@@ -7,7 +7,7 @@ import { post } from 'selenium-webdriver/http';
   providedIn: 'root'
 })
 export class RequestService {
-  baseUrl:string = 'http://192.168.1.186/public_html/m.php'
+  baseUrl:string = 'http://www.vfengs.com/m.php'
   constructor(private http:HttpClient) { }
   get(params) {
     return this.http.get(this.baseUrl+params)
