@@ -54,10 +54,10 @@ app.set('views', join(DIST_FOLDER, 'vfs-web'));
 app.get('*.*', express.static(join(DIST_FOLDER, 'vfs-web')));
 
 // All regular routes use the Universal engine
-app.get('*', (req, res) => {
-  res.render(join(DIST_FOLDER, 'vfs-web', 'index.html'), { req });
-});
-
+// app.get('*', (req, res) => {
+//   res.render(join(DIST_FOLDER, 'vfs-web', 'index.html'), { req });
+// });
+app.get('*', express.static(join(DIST_FOLDER, 'vfs-web')));
 // Start up the Node server
 app.listen(PORT, () => {
   console.log(`Node server listening on http://192.168.1.110:${PORT}`);
